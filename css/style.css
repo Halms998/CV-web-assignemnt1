@@ -1,47 +1,60 @@
+:root {
+  --bg-color: #ffffff;          
+  --header-footer-bg: #d9d9d96f;  
+  --section-border: #d9d9d9;    
+  --text-main: #353535;         
+  --text-muted: #3c6e71;        
+  --heading-color: #284b63;     
+}
+
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #eff2f4;
+  background-color: var(--bg-color);
+  color: var(--text-main);
 }
 
 
 .header {
+    position:relative;
   display: flex;
-  justify-content: center;  
-  align-items: center;      
+  justify-content: center;
+  align-items: center;
   padding: 40px 20px;
-  background-color: #c2e6ee;
+  background-color: var(--header-footer-bg);
   text-align: center;
 }
+
 
 .header-text h1 {
   margin: 0;
   font-size: 32px;
-  color: #222;
+  color: var(--heading-color);
 }
 
 .header-text p {
   margin-top: 8px;
   font-size: 18px;
-  color: #555;
+  color: var(--text-main);
 }
+
+
 section {
   padding: 20px;
-  border-bottom: 1px solid #ddd;
-}
-
-h2 {
-  color: #333;
-}
-h2 {
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
-}
-
-section {
   max-width: 800px;
   margin: auto;
+  
 }
+
+
+h2 {
+  color: var(--heading-color);
+  border-bottom: 2px solid var(--section-border);
+  
+}
+
+
 
 ul {
   padding-left: 20px;
@@ -51,11 +64,54 @@ ul {
 footer {
   text-align: center;
   padding: 10px;
-  background-color: #c2e6ee;
+  
 }
+
+
 section p strong {
-  color: #222;      
+  color: var(--text-main);
 }
+
 section p {
   line-height: 1.5;
 }
+
+
+body.dark {
+  --bg-color: #282727;          
+  --header-footer-bg: #294d4f;  
+  --section-border: #3c6e71;    
+  --text-main: #ffffff;         
+  --text-muted: #d9d9d9;        
+  --heading-color: #ffffff;     
+}
+
+
+#theme-toggle {
+    position:absolute;
+    top:20px;
+    left:50px;
+  margin-top: 14px;
+  padding: 6px 10px;
+  background-color: transparent;
+  border: 1px solid var(--text-main);
+  color: var(--text-main);
+  cursor: pointer;
+  border-radius: 4px;
+  
+}
+#theme-toggle:hover {
+  background-color: var(--text-main);
+  
+}
+
+footer {
+  background-color: var(--header-footer-bg);
+}
+
+
+
+
+
+
+
