@@ -1,7 +1,8 @@
 :root {
   --bg-color: #ffffff;          
   --header-footer-bg: #d9d9d96f;  
-  --section-border: #d9d9d9;    
+  --section-border: #d9d9d9; 
+  --section-card:  #d9d9d96f; 
   --text-main: #353535;         
   --text-muted: #3c6e71;        
   --heading-color: #284b63;     
@@ -48,11 +49,20 @@ body {
 
 
 section {
-  padding: 20px;
+   padding: 25px;
   max-width: 800px;
-  margin: auto;
+  margin: 30px auto;
+  background-color: var(--section-card);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   
 }
+
+section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
 
 
 h2 {
@@ -86,7 +96,8 @@ section p {
 
 body.dark {
   --bg-color: #282727;          
-  --header-footer-bg: #294d4f;  
+  --header-footer-bg: #294d4f; 
+  --section-card:  #1f19196f; 
   --section-border: #3c6e71;    
   --text-main: #ffffff;         
   --text-muted: #d9d9d9;        
@@ -109,10 +120,6 @@ body.dark {
  
 }
 
-#theme-toggle:hover {
-  background-color: var(--section-border);
-  
-}
 
 @media (max-width: 768px) {
   #theme-toggle {
@@ -123,7 +130,7 @@ body.dark {
 
 #theme-toggle:hover {
   background-color: var(--text-main);
-  
+ 
 }
 
 footer {
